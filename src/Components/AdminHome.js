@@ -35,7 +35,7 @@ const navigate=useNavigate();
         <Card 
           style={{ width: '18rem' }}
           className="mb-2  m-2 bg-warning" 
-          onClick={()=>navigate("vieworder")}
+          onClick={()=>navigate("/vieworder")}
         >
           <Card.Header> ORDERS</Card.Header>
           <Card.Body>
@@ -53,10 +53,10 @@ const navigate=useNavigate();
         >
           <Card.Header> Sales</Card.Header>
           <Card.Body>
-            <Card.Title>DELIVERY </Card.Title>
+            <Card.Title>ORDERS </Card.Title>
             <Card.Text>
-              Some quick example text to 
-             
+            {userData.length}
+           
             </Card.Text>
           </Card.Body>
         </Card>
@@ -68,9 +68,9 @@ const navigate=useNavigate();
         >
           <Card.Header> Sales</Card.Header>
           <Card.Body>
-            <Card.Title> ORDERS </Card.Title>
+            <Card.Title> {userData.length} </Card.Title>
             <Card.Text>
-              Some quick example text to
+            {userData.length}
              
             </Card.Text>
           </Card.Body>

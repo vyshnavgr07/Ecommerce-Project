@@ -3,7 +3,8 @@ import { Button, Card } from 'react-bootstrap'
 import { Data } from '../App';
 import { useParams } from 'react-router-dom';
 import { MDBBtn, MDBCard, MDBCardBody, MDBCol, MDBContainer, MDBInput, MDBRow } from 'mdb-react-ui-kit';
-
+import 'react-toastify/dist/ReactToastify.css';
+import { toast } from 'react-toastify';
 
 const Payment = () => {
   const{buy}=useContext(Data)
@@ -99,8 +100,8 @@ const Payment = () => {
                   />
                 </MDBCol>
               </MDBRow>
-              <MDBBtn color="success" size="lg" block>
-                Add card
+              <MDBBtn color="success" size="lg" block onClick={()=>toast.success("Your product will be shipped soon")}>
+              Pay
               </MDBBtn>
             </MDBCardBody>
           </MDBCard>

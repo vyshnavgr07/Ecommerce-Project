@@ -51,7 +51,7 @@ export const Product=[
     {
       id:4,
       img: "https://m.media-amazon.com/images/I/71oEKkghg-L._AC_UX575_.jpg",
-      title: "Nike Running Shoe",
+      title: "Adidas Running Shoe",
       star: <AiFillStar className="ratings-start" />,
       reviews: "(123 reviews)",
       prevPrice: "140,000",
@@ -115,7 +115,7 @@ export const Product=[
     {
       id:8,
       img: "https://m.media-amazon.com/images/I/61-cBsLhJHL._AC_UY695_.jpg",
-      title: "Nike Men's Sneaker",
+      title: "Adidas Men's Sneaker",
       star: <AiFillStar className="ratings-start" />,
       reviews: "(123 reviews)",
       prevPrice: "140,000",

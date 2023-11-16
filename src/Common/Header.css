@@ -3,4 +3,118 @@ width: 25rem;
 justify-content: space-around;
 }
 
+.nav-left .text{
+    color: green;
+    font-weight: bold;
+    font-size: 1.3rem;
+}
 
+
+
+.nav-left .text:hover {
+    color: #8328a7; 
+    transform: scale(1.1);
+  cursor: pointer; 
+  }
+  .nav-left svg {
+    
+    color: #111111; 
+    
+  }
+ 
+  .nav-left svg:hover {
+    transform: scale(1.1);
+    color: #ce1111; 
+    cursor: pointer; 
+  }
+  
+ 
+  .nav-left .text .nav-left svg {
+    transition: color 0.3s, transform 0.3s;
+  }
+  
+  .navbar {
+    background-color: #eff3f6; /* Set the initial background color */
+    transition: background-color 0.3s ease;
+    
+  }
+  
+  .navbar:hover {
+    background-color: #dbdbdf; /* Change the background color on hover */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Add a subtle box shadow on hover */
+  }
+  
+  .navbar-brand:hover {
+    color: #3498db; /* Change the brand text color on hover */
+  }
+  
+  .nav-link:hover {
+    color: #3498db; /* Change the link text color on hover */
+  }
+.navbar{
+color: transparent;
+}
+
+/* Header.css */
+
+.company-logo {
+    display: flex;
+    align-items: center;
+  }
+  
+  .company-logo span {
+    margin-right: 10px; /* Adjust spacing between the parts of the name */
+  }
+  
+ 
+  .logo-container {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo-container span {
+    font-size: 2rem;
+    font-weight: bold;
+    font-family: cursive;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  }
+  
+  .spin {
+    animation: spin 1s forwards;
+  }
+  
+
+  /* Header.css */
+
+.company-logo {
+    display: flex;
+    align-items: center;
+  }
+  
+  .company-logo span {
+    margin-right: 10px; /* Adjust spacing between the parts of the name */
+  }
+  
+  @keyframes vibrate {
+    0% {
+      transform: translateX(0);
+    }
+    25% {
+      transform: translateX(-5px);
+    }
+    50% {
+      transform: translateX(5px);
+    }
+    75% {
+      transform: translateX(-5px);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+  
+  .company-logo {
+    cursor: pointer;
+    animation: vibrate 0.5s ease-in-out; /* Adjust the duration and timing function as needed */
+  }
+  
