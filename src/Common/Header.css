@@ -1,4 +1,4 @@
-.nav-left{
+ .nav-left{
 width: 25rem;
 justify-content: space-around;
 }
@@ -34,28 +34,25 @@ justify-content: space-around;
   }
   
   .navbar {
-    background-color: #eff3f6; /* Set the initial background color */
+    background-color: #eff3f6; 
     transition: background-color 0.3s ease;
     
   }
   
   .navbar:hover {
-    background-color: #dbdbdf; /* Change the background color on hover */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Add a subtle box shadow on hover */
+    background-color: #dbdbdf;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   }
   
   .navbar-brand:hover {
-    color: #3498db; /* Change the brand text color on hover */
+    color: #3498db;
   }
   
   .nav-link:hover {
-    color: #3498db; /* Change the link text color on hover */
+    color: #3498db; 
   }
-.navbar{
-color: transparent;
-}
 
-/* Header.css */
+
 
 .company-logo {
     display: flex;
@@ -63,7 +60,7 @@ color: transparent;
   }
   
   .company-logo span {
-    margin-right: 10px; /* Adjust spacing between the parts of the name */
+    margin-right: 10px; 
   }
   
  
@@ -84,7 +81,7 @@ color: transparent;
   }
   
 
-  /* Header.css */
+  
 
 .company-logo {
     display: flex;
@@ -92,7 +89,7 @@ color: transparent;
   }
   
   .company-logo span {
-    margin-right: 10px; /* Adjust spacing between the parts of the name */
+    margin-right: 10px; 
   }
   
   @keyframes vibrate {
@@ -115,6 +112,6 @@ color: transparent;
   
   .company-logo {
     cursor: pointer;
-    animation: vibrate 0.5s ease-in-out; /* Adjust the duration and timing function as needed */
+    animation: vibrate 0.5s ease-in-out; 
   }
   

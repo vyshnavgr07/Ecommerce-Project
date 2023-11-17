@@ -7,10 +7,11 @@ import { Data } from '../App';
 import 'react-toastify/dist/ReactToastify.css';
 import { toast } from 'react-toastify';
 import Product from '../Components/Products';
+import "./Header.css"
 
 const Header = () => {
   const navigate = useNavigate();
-  const { login, setLogin, userData, cart, setcart, product, setProduct, } = useContext(Data);
+  const { login, setLogin, userData, setcart, } = useContext(Data);
 
   const logout = () => {
     setLogin(false);
@@ -32,19 +33,7 @@ const Header = () => {
     alignItems: 'center',
   };
 
-  const msg = (e) => {
-    e.preventDefault()
-    const searchTerm = e.target.value.toLowerCase();
-
-    if (searchTerm === "") {
-      setProduct(Product); 
-    } else {
-      const searchResults = product.filter((item) =>
-        item.title.toLowerCase().includes(searchTerm)
-      );
-      setProduct(searchResults);
-    }
-  };
+ 
 
   return (
     <div>
@@ -63,10 +52,7 @@ const Header = () => {
               <Nav.Link onClick={() => navigate('/main')}>All Category</Nav.Link>
               <Nav.Link onClick={() => navigate('/men')}>MEN</Nav.Link>
               <Nav.Link onClick={() => navigate('/women')}>WOMEN</Nav.Link>
-              <Form className="d-flex flex-grow-1">
-                <Form.Control type="search" placeholder="Search" className="me-2" aria-label="Search" onChange={msg} />
-                <Button variant="outline-success">Search</Button>
-              </Form>
+            
             </Nav>
 
             <Nav className="d-flex my-3 nav-left  fw-bold" navbarScroll>
@@ -80,12 +66,12 @@ const Header = () => {
                   <Nav.Link className="text-danger" onClick={logout}>
                     LogOut
                   </Nav.Link>
-                </>
+                  
+                  </>
               )}
-
-              <BsCartFill style={{ width: '2rem', height: '2rem', marginLeft: '1rem', cursor: 'pointer' }} onClick={carticon} />
-              <MdAdminPanelSettings style={{ width: '2rem', height: '2rem', marginLeft: '1rem', cursor: 'pointer' }} onClick={() => navigate('/adminlogin')} />
-            </Nav>
+          <BsCartFill style={{ width: '2rem', height: '2rem', marginLeft: '1rem', cursor: 'pointer' }} onClick={carticon} />
+             <MdAdminPanelSettings style={{ width: '2rem', height: '2rem', marginLeft: '1rem', cursor: 'pointer' }} onClick={() => navigate('/adminlogin')} />
+             </Nav>
           </Navbar.Collapse>
         </Container>
       </Navbar>

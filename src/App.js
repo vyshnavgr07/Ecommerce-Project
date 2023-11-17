@@ -25,6 +25,7 @@ import SideBar from './Components/SideBar';
 import AddProduct from './Components/Admin/AddProduct';
 import AdminMain from './Components/Admin/AdminMain';
 import EditPro from './Components/Admin/EditPro';
+import NavAll from './Components/NavAll';
 
 
 
@@ -68,6 +69,7 @@ const [search,setsearch]=useState(product);
         <Route path="/addproduct"    element={<AddProduct/>} />
         <Route path='/adminmain'        element={<AdminMain/>}/>
         <Route path='/editpro/:id'          element={<EditPro/>}  />
+        
 
         
        </Routes>

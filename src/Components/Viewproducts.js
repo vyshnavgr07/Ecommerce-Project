@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import { Data } from '../App';
 import { useNavigate, useParams } from 'react-router-dom';
 import { Button, Card } from 'react-bootstrap';
@@ -10,6 +10,7 @@ const Viewproducts = () => {
   const { product, cart, setcart, login } = useContext(Data);
   const { id } = useParams();
   const findView = product.find((item) => item.id === parseInt(id));
+const[btn,setbtn]=useState(true);
 
   const addCart = () => {
     if (login) {
@@ -19,6 +20,7 @@ const Viewproducts = () => {
         toast.success("Your Product is Added");
       } else {
         toast.error("This product is already in your cart");
+        setbtn(false);
       }
     } else {
       navigate('/login');
@@ -41,10 +43,20 @@ const Viewproducts = () => {
           <Card.Title>{findView.title}</Card.Title>
           <h3 className='text-warning'>Rs {findView.newPrice}</h3>
           <h5 className='text-danger'>{findView.company}</h5>
-          <Button className='bg-success' variant='primary' onClick={addCart}>
-            Add to Cart
-          </Button>
-        </Card.Body>
+
+          {(btn) ? (
+  <Button className='bg-success' variant='primary' onClick={addCart}>
+    Add to Cart
+  </Button>
+) : (
+  <Button className='bg-danger' variant='primary'  onClick={()=>navigate("/cart")}>
+   G0 To Cart
+  </Button>
+)}
+
+
+          
+      </Card.Body>
       </Card>
     </div>
   </div>

@@ -70,7 +70,7 @@ const Cartt = () => {
                 </MDBTypography>
                 <div>
                   <p className="mb-0">
-                    <span className="text-warning">TOTAL </span>
+                    <span className="text-warning"> </span>
                     <a href="#!" className="text-danger">
                       {reducer} <i className="fas fa-angle-down mt-1"></i>
                     </a>
@@ -125,7 +125,9 @@ const Cartt = () => {
         <button className="bg-warning m-2" onClick={clearcart}>
           ClearCart
         </button>
-        <button className="bg-success" onClick={order}>
+
+
+  <button className="bg-success" onClick={order}>
           Buy ALL
         </button>
       </div>
