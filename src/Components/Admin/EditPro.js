@@ -76,7 +76,7 @@ const EditPro = () => {
               <b>Title</b>
             </th>
             <th scope="col">
-              <b>New Price</b>
+              <b> Price</b>
             </th>
             <th scope="col">
               <b>Stock</b>

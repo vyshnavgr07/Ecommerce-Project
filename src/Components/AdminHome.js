@@ -9,11 +9,11 @@ const AdminHome = () => {
   const{userData,vieworder} =useContext(Data);
 const navigate=useNavigate();
   return (
-    <div className='d-flex'>
+    <div className='d-flex bg-secondary w-100'>
   <div>
   <SideBar/>
   </div>
-<div className='d-flex mt-5'>
+<div className='d-flex mt-5 '>
 
 <div  >
         <Card 
@@ -25,7 +25,7 @@ const navigate=useNavigate();
           <Card.Body>
             <Card.Title> USERS </Card.Title>
             <Card.Text>
-             {userData.length}
+       <h1>  {userData.length} </h1>
             </Card.Text>
           </Card.Body>
         </Card>
@@ -41,7 +41,7 @@ const navigate=useNavigate();
           <Card.Body>
             <Card.Title> ORDERS </Card.Title>
             <Card.Text>
-             {vieworder.length}
+       <h1>     {vieworder.length}  </h1> 
             </Card.Text>
           </Card.Body>
         </Card>
@@ -53,9 +53,9 @@ const navigate=useNavigate();
         >
           <Card.Header> Sales</Card.Header>
           <Card.Body>
-            <Card.Title>ORDERS </Card.Title>
+            <Card.Title>Sales </Card.Title>
             <Card.Text>
-            {userData.length}
+        <h1>  {userData.length} </h1>
            
             </Card.Text>
           </Card.Body>
@@ -66,17 +66,17 @@ const navigate=useNavigate();
           style={{ width: '18rem' }}
           className="mb-2  m-2  bg-primary"
         >
-          <Card.Header> Sales</Card.Header>
+          <Card.Header> Delivered</Card.Header>
           <Card.Body>
-            <Card.Title> {userData.length} </Card.Title>
+            <Card.Title> Delivery </Card.Title>
             <Card.Text>
-            {userData.length}
+      <h1>  {userData.length+5} </h1>  
              
             </Card.Text>
           </Card.Body>
         </Card>
         </div>
-   
+       
 </div>
 
 

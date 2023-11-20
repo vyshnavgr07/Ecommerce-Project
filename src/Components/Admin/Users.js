@@ -8,6 +8,8 @@ const Users = () => {
   const { userData } = useContext(Data);
 
   return (
+    <div>
+      {userData.length<=0?<h1>No User Found</h1>:<h1>User Details</h1>}
     <div className='d-flex'>
       <div>
         <SideBar />
@@ -22,12 +24,14 @@ const Users = () => {
                 <th scope='col'>Username</th>
                 <th scope='col'>E-Mail</th>
                 <th scope='col'>Password</th>
+                
               </tr>
             </MDBTableHead>
             <MDBTableBody>
               {userData.map((item) => (
                 <tr key={item.userId}>
-                  <td>
+
+                <td>
                     <div className='d-flex align-items-center'>
                       <img
                         src={Img1}
@@ -40,12 +44,15 @@ const Users = () => {
                   <td>{item.userName}</td>
                   <td>{item.emailId}</td>
                   <td>{item.password}</td>
-                </tr>
+                  </tr>
               ))}
             </MDBTableBody>
           </MDBTable>
         </div>
       </div>
+     </div>
+    
+    
     </div>
   );
 };

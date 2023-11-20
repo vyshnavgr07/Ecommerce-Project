@@ -38,7 +38,7 @@ const Registration = () => {
     }
 
     setErrorMessage('');
-    const newUser = { userName: username, emailId: emailId, password: password };
+    const newUser = { userName: username, emailId: emailId, password: password,cart:[] };
     setUserData([...userData, newUser]);
 
     navigate('/login');

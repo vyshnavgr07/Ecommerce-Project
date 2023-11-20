@@ -9,7 +9,7 @@ const Login = () => {
 
   
 
-  const {userData, setLogin }=useContext(Data)
+  const {userData, setLogin,loginuser,setloginuser }=useContext(Data)
   const navigate=useNavigate();
  console.log(userData);
   const user=useRef();
@@ -28,6 +28,7 @@ const logins=(e)=>{
     setLogin(true)
   toast.success('Thankyou For Login')
      navigate("/")
+     setloginuser(users);
   }else{
     toast.error("User not found")
 

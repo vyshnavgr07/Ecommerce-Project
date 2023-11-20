@@ -42,13 +42,14 @@ const[product,setProduct]=useState(Product);
 const [cart,setcart]=useState([]);
 const [vieworder,setvieworder]=useState([]);
 const [search,setsearch]=useState(product);
+const[loginuser,setloginuser]=useState([]);
 
   
 
   
   return (
     <div className="App">
-     <Data.Provider value={{product,setProduct,cart,setcart,userData, setUserData,login,setLogin,vieworder,setvieworder}}> 
+     <Data.Provider value={{product,setProduct,cart,setcart,userData, setUserData,login,setLogin,vieworder,setvieworder,loginuser,setloginuser}}> 
       <Header/>
       <Routes>
       <Route  path='/'  element= {<Home />} />

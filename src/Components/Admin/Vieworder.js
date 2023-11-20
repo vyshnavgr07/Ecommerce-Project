@@ -19,7 +19,10 @@ const Vieworder = () => {
               <MDBCol md="10">
                 <div className="d-flex justify-content-between align-items-center mb-4">
                   <MDBTypography tag="h3" className="fw-normal mb-0 text-black">
-                    ORDER DETAILS
+                   {(vieworder.length)<=0?(
+                    <h1>No Order Yet....</h1>
+                   ):
+                   <h1>ProductsDetails</h1>}
                   </MDBTypography>
                   <div>
                     <p className="mb-0">

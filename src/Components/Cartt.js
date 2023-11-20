@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { MDBCard, MDBCardBody, MDBCardImage, MDBCol, MDBContainer, MDBIcon, MDBRow, MDBTypography } from 'mdb-react-ui-kit';
 import { toast } from 'react-toastify';
 import { useNavigate } from 'react-router-dom';
@@ -6,19 +6,25 @@ import { Data } from '../App';
 
 
 const Cartt = () => {
-  const { cart, setcart, product, vieworder, setvieworder } = useContext(Data);
+  const { cart, setcart, product, vieworder, setvieworder,loginuser, } = useContext(Data);
+  const [userCart,setusercart]=useState()
   const navigate = useNavigate();
+  const [cartuser,setcartuser]=useState([]);
+  useEffect(()=>{
+    setcartuser(loginuser.cart);
+  },[])
+;
+const removeTask = (x) => {
+  const newTask = cartuser.filter((item) => item.id !== x);
+  setcartuser(newTask);
+  loginuser.cart = newTask
+  toast.error('Your product is Removed');
+};
 
-  const removeTask = (index) => {
-    const newTask = [...cart];
-    newTask.splice(index, 1);
-    setcart(newTask);
-    toast.error('Your product is Removed');
-  };
 
   const handleinc = (x) => {
     const productprice = product.find((item) => item.id === x);
-    const updatecart = cart.map((item) => {
+    const updatecart = cartuser.map((item) => {
       if (item.id === x) {
         if (item.quantity < item.stock) {
           item.quantity += 1;
@@ -32,7 +38,7 @@ const Cartt = () => {
 
   const handledec = (x) => {
     const productprice = product.find((item) => item.id === x);
-    const updatecart = cart.map((item) => {
+    const updatecart = cartuser.map((item) => {
       if (item.id === x) {
         if (item.quantity <= item.stock && item.quantity > 1) {
           item.quantity -= 1;
@@ -44,12 +50,11 @@ const Cartt = () => {
     setcart(updatecart);
   };
 
-  const reducer = cart.reduce((acc, curr) => acc + curr.newPrice, 0);
+  const reducer = cartuser.reduce((acc, curr) => acc +parseFloat(curr.newPrice), 0);
 
-  const clearcart = (index) => {
-    const clearTask = [...cart];
-    clearTask.splice(index, clearTask.length);
-    setcart(clearTask);
+  const clear = () => {
+    loginuser.cart=[];
+    setcartuser([])
     toast.success('Your Cart is Empty');
   };
 
@@ -72,13 +77,13 @@ const Cartt = () => {
                   <p className="mb-0">
                     <span className="text-warning"> </span>
                     <a href="#!" className="text-danger">
-                      {reducer} <i className="fas fa-angle-down mt-1"></i>
+                       {reducer} <i className="fas fa-angle-down mt-1"></i> 
                     </a>
                   </p>
                 </div>
               </div>
 
-              {cart.map((item) => (
+              {cartuser.map((item) => (
                 <MDBCard key={item.id} className="rounded-3 mb-4">
                   <MDBCardBody className="p-4">
                     <MDBRow className="justify-content-between align-items-center">
@@ -109,7 +114,7 @@ const Cartt = () => {
 
                       <MDBCol md="12" lg="6" xl="4" className="text-end">
                         <a href="#!" className="text-danger">
-                          <MDBIcon onClick={() => removeTask(cart.indexOf(item))} icon="trash text-danger" size="lg" />
+                          <MDBIcon onClick={() => removeTask(item.id)} icon="trash text-danger" size="lg" />
                         </a>
                       </MDBCol>
                     </MDBRow>
@@ -121,8 +126,8 @@ const Cartt = () => {
         </MDBContainer>
       </section>
       <div>
-        <h1>TOTAL {reducer}</h1>
-        <button className="bg-warning m-2" onClick={clearcart}>
+         <h1>TOTAL {reducer}</h1> 
+        <button className="bg-warning m-2" onClick={(()=>clear())}>
           ClearCart
         </button>
 

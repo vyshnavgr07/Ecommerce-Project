@@ -14,7 +14,7 @@ const AdminProduct = () => {
   }
 
   return (
-    <div  className='d-flex'>
+    <div  className='d-flex '>
       <div>
 <SideBar/>
 
@@ -53,8 +53,8 @@ const AdminProduct = () => {
                       <MDBCol md="3" lg="3" xl="3">
                         <p className="lead fw-normal mb-2">{item.title}</p>
                         <p>
-                          <span className="text-muted">Size: </span>M{" "}
-                          <span className="text-muted">Color: </span>Grey
+                          <span className="text-muted">Color:: </span>{item.color} {" "}
+                          <span className="text-muted">company::</span>{item.company}
                         </p>
                       </MDBCol>
                       
