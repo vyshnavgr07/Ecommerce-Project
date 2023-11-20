@@ -31,6 +31,7 @@ import NavAll from './Components/NavAll';
 
 
 
+
 export const Data=createContext();
 
 
@@ -51,6 +52,7 @@ const[loginuser,setloginuser]=useState([]);
     <div className="App">
      <Data.Provider value={{product,setProduct,cart,setcart,userData, setUserData,login,setLogin,vieworder,setvieworder,loginuser,setloginuser}}> 
       <Header/>
+     
       <Routes>
       <Route  path='/'  element= {<Home />} />
         <Route  path='/login'  element= {<Login/>} />
@@ -70,10 +72,7 @@ const[loginuser,setloginuser]=useState([]);
         <Route path="/addproduct"    element={<AddProduct/>} />
         <Route path='/adminmain'        element={<AdminMain/>}/>
         <Route path='/editpro/:id'          element={<EditPro/>}  />
-        
-
-        
-       </Routes>
+      </Routes>
        <Footer/>
     </Data.Provider>
 

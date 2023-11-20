@@ -41,7 +41,7 @@ const navigate=useNavigate();
           <Card.Body>
             <Card.Title> ORDERS </Card.Title>
             <Card.Text>
-       <h1>     {vieworder.length}  </h1> 
+       <h1>     {vieworder.length} </h1> 
             </Card.Text>
           </Card.Body>
         </Card>

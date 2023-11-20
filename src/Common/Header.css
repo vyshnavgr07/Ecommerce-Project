@@ -109,9 +109,15 @@ justify-content: space-around;
       transform: translateX(0);
     }
   }
-  
+  .navbar-toggler-icon
+{
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%283, 152, 158, 0.75%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='4' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
   .company-logo {
     cursor: pointer;
     animation: vibrate 0.5s ease-in-out; 
+  }
+  .navbar-toggler-icon{
+    background-image: url("../../public/list.svg") !important;
   }
   

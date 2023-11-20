@@ -8,6 +8,9 @@ import 'react-toastify/dist/ReactToastify.css';
 import { toast } from 'react-toastify';
 import Product from '../Components/Products';
 import "./Header.css"
+import { IoMenu } from "react-icons/io5";
+import { GiHamburgerMenu } from "react-icons/gi";
+
 
 const Header = () => {
   const navigate = useNavigate();
@@ -46,9 +49,15 @@ const Header = () => {
             </div>
           </Navbar.Brand>
 
-          <Navbar.Toggle aria-controls="navbarScroll" />
-          <Navbar.Collapse id="navbarScroll">
-            <Nav className="me-auto my-2 my-lg-0 fw-bold" style={{ maxHeight: '100px' }} navbarScroll>
+          <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+          {/* <GiHamburgerMenu /> */}
+
+          <Navbar.Collapse id="responsive-navbar-nav"  >
+          {/* <GiHamburgerMenu /> */}
+
+          {/* <span className="navbar-toggler-icon" style={{ backgroundColor: 'black' }}></span> */}
+            <Nav className="me-auto my-2 my-lg-0 fw-bold" style={{ maxHeight: '100px' }} navbarScroll variant="black">
+            
               <Nav.Link onClick={() => navigate('/main')}>All Category</Nav.Link>
               <Nav.Link onClick={() => navigate('/men')}>MEN</Nav.Link>
               <Nav.Link onClick={() => navigate('/women')}>WOMEN</Nav.Link>

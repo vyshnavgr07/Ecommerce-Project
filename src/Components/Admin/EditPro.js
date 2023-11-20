@@ -53,17 +53,17 @@ const EditPro = () => {
     );
 
     setProduct(updatedProduct);
-    const updatedCart = cart.map((item) =>
-      item.id === parseInt(id)
-        ? {
-            ...item,
-            title: updatedTitle,
-            stock: updatedStock,
-            newPrice: updatedPrice,
-          }
-        : item
-    );
-   setcart(updatedCart)
+  //   const updatedCart = cart.map((item) =>
+  //     item.id === parseInt(id)
+  //       ? {
+  //           ...item,
+  //           title: updatedTitle,
+  //           stock: updatedStock,
+  //           newPrice: updatedPrice,
+  //         }
+  //       : item
+  //   );
+  //  setcart(updatedCart)
     toast.success("Product updated");
   };
 

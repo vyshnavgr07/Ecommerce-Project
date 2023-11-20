@@ -26,7 +26,7 @@ const removeTask = (x) => {
     const productprice = product.find((item) => item.id === x);
     const updatecart = cartuser.map((item) => {
       if (item.id === x) {
-        if (item.quantity < item.stock) {
+        if (item.quantity <= item.stock) {
           item.quantity += 1;
           item.newPrice = parseFloat(productprice.newPrice) * item.quantity;
         }
@@ -60,7 +60,7 @@ const removeTask = (x) => {
 
   const order = () => {
     navigate('/payment');
-    setvieworder(cart);
+    setvieworder(cartuser);
   };
 
   return (

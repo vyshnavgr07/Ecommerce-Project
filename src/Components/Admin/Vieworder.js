@@ -4,7 +4,7 @@ import SideBar from '../SideBar';
 import { MDBCard, MDBCardBody, MDBCardImage, MDBCol, MDBContainer, MDBIcon, MDBRow, MDBTypography } from 'mdb-react-ui-kit';
 
 const Vieworder = () => {
-  const { vieworder, setvieworder } = useContext(Data);
+  const { vieworder, setvieworder,userData } = useContext(Data);
 
   return (
     <div className='d-flex'>
@@ -44,8 +44,13 @@ const Vieworder = () => {
                         <MDBCol md="12" lg="6" xl="8">
                           <p className="lead fw-normal mb-2">{item.title}</p>
                           <p>
-                            <span className="text-muted">Size: </span>M{' '}
+                            {userData.map((item)=>(
+                              <> 
+                              <span className="text-muted">user </span>  {item.userName} {" "}
                             <span className="text-muted">Color: </span>Grey
+                            </>
+                            ))}
+                            
                           </p>
                         </MDBCol>
                         <MDBCol

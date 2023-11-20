@@ -43,13 +43,13 @@ const Viewproducts = () => {
           {findView.map((item) => (
             <Card className='w-100'>
               <Card.Img
-                className='mx-auto' // Center the image horizontally
+                className='mx-auto' 
                 style={{ width: "15rem", height: "10rem" }}
                 variant='top'
                 src={item.img}
               />
               <Card.Body className='text-center'>
-                {/* Center the text and inline elements */}
+               
                 <Card.Title>{item.title}</Card.Title>
                 <h3 className='text-warning'>Rs {item.newPrice}</h3>
                 <h5 className='text-danger'>{item.company}</h5>

@@ -34,8 +34,7 @@ const AddProduct = () => {
       newPrice,
       img: imageUrlRef.current.value,
       gender: categoryRef.current.value,
-      company: companyRef.current.value, // Fix: Use companyRef for company input
-      quantity,
+      company: companyRef.current.value,
     };
 
     const newTask = [...product, newProduct];
