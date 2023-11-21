@@ -9,7 +9,7 @@ const Login = () => {
 
   
 
-  const {userData, setLogin,loginuser,setloginuser }=useContext(Data)
+  const {userData, setLogin,setloginuser }=useContext(Data)
   const navigate=useNavigate();
  console.log(userData);
   const user=useRef();
