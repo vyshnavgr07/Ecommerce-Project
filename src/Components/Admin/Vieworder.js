@@ -4,7 +4,7 @@ import SideBar from '../SideBar';
 import { MDBCard, MDBCardBody, MDBCardImage, MDBCol, MDBContainer, MDBIcon, MDBRow, MDBTypography } from 'mdb-react-ui-kit';
 
 const Vieworder = () => {
-  const { vieworder, setvieworder,userData } = useContext(Data);
+  const { vieworder,userData } = useContext(Data);
 
   return (
     <div className='d-flex'>

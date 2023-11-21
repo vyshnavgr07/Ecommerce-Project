@@ -1,7 +1,7 @@
 import React, { useContext } from 'react'
-import { Button, Card } from 'react-bootstrap'
+
 import { Data } from '../App';
-import { useParams } from 'react-router-dom';
+
 import { MDBBtn, MDBCard, MDBCardBody, MDBCol, MDBContainer, MDBInput, MDBRow } from 'mdb-react-ui-kit';
 import 'react-toastify/dist/ReactToastify.css';
 import { toast } from 'react-toastify';
@@ -30,7 +30,7 @@ const Payment = () => {
               <div className="d-flex flex-row align-items-center mb-4 pb-1">
                 <img
                   className="img-fluid"
-                  src="https://img.icons8.com/color/48/000000/mastercard-logo.png"
+                  src="https://img.icons8.com/color/48/000000/mastercard-logo.png" alt='Loading..'
                 />
                 <div className="flex-fill mx-3">
                   <div className="form-outline">
@@ -48,7 +48,7 @@ const Payment = () => {
               <div className="d-flex flex-row align-items-center mb-4 pb-1">
                 <img
                   className="img-fluid"
-                  src="https://img.icons8.com/color/48/000000/visa.png"
+                  src="https://img.icons8.com/color/48/000000/visa.png"  alt='Loading...'
                 />
                 <div className="flex-fill mx-3">
                   <div className="form-outline">

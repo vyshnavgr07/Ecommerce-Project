@@ -11,7 +11,7 @@ const EditPro = () => {
   const stockRef = useRef(null);
   const priceRef = useRef(null);
 
-  const { product, setProduct,cart,setcart } = useContext(Data);
+  const { product, setProduct} = useContext(Data);
   const findval = product.find((item) => item.id === parseInt(id));
 
   const [formData, setFormData] = useState({
