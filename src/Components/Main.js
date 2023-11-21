@@ -2,9 +2,9 @@ import React, { useContext } from 'react';
 import { Data } from '../App';
 import { Button, Card, Col, Row } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
-import SideBar from './SideBar';
+
 import './Main.css';
-import NavAll from './NavAll';
+
 import { useState } from 'react';
 
 const Main = () => {

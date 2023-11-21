@@ -25,7 +25,7 @@ import SideBar from './Components/SideBar';
 import AddProduct from './Components/Admin/AddProduct';
 import AdminMain from './Components/Admin/AdminMain';
 import EditPro from './Components/Admin/EditPro';
-import NavAll from './Components/NavAll';
+
 
 
 
@@ -42,7 +42,7 @@ const [login, setLogin ]=useState(false);
 const[product,setProduct]=useState(Product);
 const [cart,setcart]=useState([]);
 const [vieworder,setvieworder]=useState([]);
-const [search,setsearch]=useState(product);
+
 const[loginuser,setloginuser]=useState([]);
 
   

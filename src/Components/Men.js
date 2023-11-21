@@ -2,7 +2,7 @@ import React, { useContext } from 'react'
 import { Data } from '../App'
 import { Button, Card } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
-import { ToastContainer, toast } from 'react-toastify';
+
 
 const Men = () => {
     const navigate=useNavigate()

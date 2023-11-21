@@ -1,25 +1,22 @@
 import React, { useContext } from 'react';
-import { Navbar, Nav, Container, Button, Form } from 'react-bootstrap';
+import { Navbar, Nav, Container} from 'react-bootstrap';
 import { BsCartFill } from 'react-icons/bs';
 import { MdAdminPanelSettings } from 'react-icons/md';
 import { useNavigate } from 'react-router-dom';
 import { Data } from '../App';
 import 'react-toastify/dist/ReactToastify.css';
 import { toast } from 'react-toastify';
-import Product from '../Components/Products';
-import "./Header.css"
-import { IoMenu } from "react-icons/io5";
-import { GiHamburgerMenu } from "react-icons/gi";
 
+import "./Header.css"
 
 const Header = () => {
   const navigate = useNavigate();
-  const { login, setLogin, userData, setcart, } = useContext(Data);
+  const { login, setLogin, userData} = useContext(Data);
 
   const logout = () => {
     setLogin(false);
     navigate('/');
-    setcart([]);
+    
     toast.error('You have logged out');
   };
 
