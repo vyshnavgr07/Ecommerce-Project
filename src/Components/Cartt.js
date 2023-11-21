@@ -12,7 +12,7 @@ const Cartt = () => {
   const [cartuser,setcartuser]=useState([]);
   useEffect(()=>{
     setcartuser(loginuser.cart);
-  },[])
+  },[null])
 ;
 const removeTask = (x) => {
   const newTask = cartuser.filter((item) => item.id !== x);
