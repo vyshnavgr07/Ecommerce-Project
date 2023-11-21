@@ -6,8 +6,8 @@ import { Data } from '../App';
 
 
 const Cartt = () => {
-  const { cart, setcart, product, vieworder, setvieworder,loginuser, } = useContext(Data);
-  const [userCart,setusercart]=useState()
+  const { setcart, product, setvieworder,loginuser, } = useContext(Data);
+
   const navigate = useNavigate();
   const [cartuser,setcartuser]=useState([]);
   useEffect(()=>{
