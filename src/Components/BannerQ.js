@@ -17,7 +17,7 @@ const BannerQ = () => {
 
       <Row>
         <Col>
-          <h1>Explore Top Picks from Your Favorite Brands</h1>
+          <h1>Explore Top Picks</h1>
           <img
             src="https://3.bp.blogspot.com/-jYviyiH5lCc/U2DDfcOxw0I/AAAAAAAAADk/ktx-5xRBbdA/s1600/10+top+shoe+brands+in+india.PNG"
             alt=""
