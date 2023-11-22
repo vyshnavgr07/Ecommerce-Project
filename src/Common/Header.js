@@ -58,7 +58,7 @@ const Header = () => {
               <Nav.Link onClick={() => navigate('/main')}>All Category</Nav.Link>
               <Nav.Link onClick={() => navigate('/men')}>MEN</Nav.Link>
               <Nav.Link onClick={() => navigate('/women')}>WOMEN</Nav.Link>
-            
+              
             </Nav>
 
             <Nav className="d-flex my-3 nav-left  fw-bold" navbarScroll>
