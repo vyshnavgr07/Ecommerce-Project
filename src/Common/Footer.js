@@ -21,9 +21,7 @@ const Footer = () => {
             <p>
               <span className="text-white" style={{ textDecoration: 'none' }}>Sandals</span>
             </p>
-            <p>
-              <span className="text-white" style={{ textDecoration: 'none' }}>FootWear Products</span>
-            </p>
+            
             <p>
               <span className="text-white" style={{ textDecoration: 'none' }}>Shoes</span>
             </p>
@@ -31,17 +29,12 @@ const Footer = () => {
           <div className="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
             <h5 className="text-uppercase mb-4 font-weight-bold">Services</h5>
             <p>
-              <span className="text-white" style={{ textDecoration: 'none' }}>Privacy Policy</span>
-            </p>
-            <p>
               <span className="text-white" style={{ textDecoration: 'none' }}>Return & Refund Policy</span>
             </p>
             <p>
               <span className="text-white" style={{ textDecoration: 'none' }}>Free Shipping</span>
             </p>
-            <p>
-              <span className="text-white" style={{ textDecoration: 'none' }}>Security</span>
-            </p>
+            
           </div>
           <div className="col-md-5 col-lg-3 col-xl-3 mx-auto mt-3">
             <h5 className="text-uppercase mb-4 font-weight-bold">Contact</h5>
