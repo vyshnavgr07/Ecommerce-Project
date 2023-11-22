@@ -13,7 +13,7 @@ function Banner() {
         <img
           src={pic1}
           className="d-block w-100 img-fluid"
-          style={{ objectFit: "cover", maxHeight: "85vh" }}
+          style={{ objectFit: "cover", maxHeight: "87vh" }}
           alt="ExampleImage"
         />
         <Carousel.Caption></Carousel.Caption>
