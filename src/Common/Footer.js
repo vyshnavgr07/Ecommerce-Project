@@ -46,17 +46,9 @@ const Footer = () => {
           <div className="col-md-5 col-lg-3 col-xl-3 mx-auto mt-3">
             <h5 className="text-uppercase mb-4 font-weight-bold">Contact</h5>
             <p>
-            <BsInstagram /> 
+            <BsInstagram />  <BsFacebook/> <AiFillTwitterCircle/> <BsWhatsapp/>
             </p>
-            <p>
-            <BsFacebook/> 
-            </p>
-            <p>
-              <AiFillTwitterCircle/>
-            </p>
-            <p>
-             <BsWhatsapp/>
-            </p>
+           
           </div>
         </div>
         <hr className="mb-4" />
