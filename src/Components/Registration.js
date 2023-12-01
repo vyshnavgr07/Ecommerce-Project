@@ -38,31 +38,33 @@ const Registration = () => {
     }
 
     setErrorMessage('');
-    const newUser = { userName: username, emailId: emailId, password: password,cart:[] };
+    const newUser = { userName: username, emailId: emailId, password: password, cart: [] };
     setUserData([...userData, newUser]);
 
     navigate('/login');
   };
 
   return (
-    <div className='rounded shadow p-3 mb-5 bg-white' style={{ margin: 'auto', height: '55vh', width: '25rem', marginTop: '10%' }}>
-      <form>
-        <h1 className='mt-3' style={{ fontFamily: 'inherit' }}>
-          SIGN UP
-        </h1>
-        <input ref={userNameRef} className='p-2 w-75 mt-3' style={{ height: '2.5rem', border: '1px solid gray', borderRadius: '.5rem' }} type='text' placeholder='UserName' />
-        <br />
-        <input ref={emailIdRef} className='p-2 w-75 mt-4' style={{ height: '2.5rem', border: '1px solid gray', borderRadius: '.5rem' }} type='email' placeholder='Email' />
-        <br />
-        <input ref={passwordRef}   type='password'     className='p-2 w-75 mt-4' style={{ height: '2.5rem', border: '1px solid gray', borderRadius: '.5rem' }}  placeholder='Password' />
-        {errorMessage && <p style={{ color: 'red' }}>{errorMessage}</p>}
-        <button className='rounded mt-4 w-50 p-2' style={{ background: '#176BEF', border: '1px', color: 'white', fontWeight: '600' }} onClick={submit}>
-          Sign up
-        </button>
-        <p className='mt-4'>
-          Already have an account? <Link to='/login' style={{ textDecoration: 'none' }}>Login</Link>
-        </p>
-      </form>
+    <div className="container d-flex justify-content-center align-items-center" style={{ minHeight: '100vh' }}>
+      <div className='rounded shadow p-3 mb-5 bg-white' style={{ width: '25rem' }}>
+        <form>
+          <h1 className='mt-3' style={{ fontFamily: 'inherit' }}>
+            SIGN UP
+          </h1>
+          <input ref={userNameRef} className='form-control mt-3' type='text' placeholder='Username' />
+          <br />
+          <input ref={emailIdRef} className='form-control mt-4' type='email' placeholder='Email' />
+          <br />
+          <input ref={passwordRef} className='form-control mt-4' type='password' placeholder='Password' />
+          {errorMessage && <p style={{ color: 'red' }}>{errorMessage}</p>}
+          <button className='btn btn-primary rounded mt-4 w-100' onClick={submit}>
+            Sign up
+          </button>
+          <p className='mt-4'>
+            Already have an account? <Link to='/login' style={{ textDecoration: 'none' }}>Login</Link>
+          </p>
+        </form>
+      </div>
     </div>
   );
 };

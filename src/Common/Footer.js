@@ -6,9 +6,9 @@ import { BsFacebook, BsInstagram, BsWhatsapp } from 'react-icons/bs';
 
 const Footer = () => {
   return (
-    <div  >
-    <footer className="bg-dark text-white pt-5 pb-4">
-      <div className="container text-center text-md-left">
+    <div className='w-100' >
+    <footer className="bg-dark text-white pt-5 pb-4 w-100 ">
+      <div className="container text-center text-md-left w-100">
         <div className="row text-center text-md-left">
           <div className="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
             <h5 className="text-uppercase mb-4 font-weight-bold">Company</h5>
